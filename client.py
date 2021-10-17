@@ -67,5 +67,5 @@ def tcp_client(Host, Port):
         client_socket.send('END'.encode())
         client_socket.close()  # close the connection
 if __name__ == "__main__":
-    serverip = socket.gethostbyname(socket.gethostname())
+    serverip = '10.138.0.3'#socket.gethostbyname(socket.gethostname())
     tcp_client(serverip,12345) # need to put the output of gethostname from server into the host argument
