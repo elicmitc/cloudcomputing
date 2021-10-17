@@ -72,9 +72,9 @@ def thread_work(conn):
                                 found = 1
                                 break
                     if(found):
-                        message = 'VALUE ' + str(key) + ' ' + str(s_bytes)
+                        message = str(value) + str(key) + ' ' + str(s_bytes)
                         conn.send(message.encode())
-                        conn.send(value.encode())
+                        #conn.send(value.encode())
                         conn.send('END'.encode())
                     else:
                         conn.send('END'.encode())
