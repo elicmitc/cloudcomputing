@@ -1,4 +1,5 @@
 import socket
+import sys
 c_get = '\tget <key> \\r\\n\n\n'
 c_set = '\tset <key> <value-size-bytes> \\r\\n\n\t<value> \\r\\n\n\n'
 terminate = '\tterminate\n'
@@ -67,5 +68,5 @@ def tcp_client(Host, Port):
         client_socket.send('END'.encode())
         client_socket.close()  # close the connection
 if __name__ == "__main__":
-    serverip = '10.138.0.3'#socket.gethostbyname(socket.gethostname())
+    serverip = str(sys.argv[1])#socket.gethostbyname(socket.gethostname())
     tcp_client(serverip,12345) # need to put the output of gethostname from server into the host argument
