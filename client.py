@@ -50,13 +50,14 @@ def tcp_client(Host, Port):
                         if(info == 'END'):
                             break
                         if(msg_num == 0):
-                            print(info)
+                            info = info.replace('\n','')
+                            print(f'{info}')
                             msg_num +=1
                             temp1,temp2,n_size = info.split(' ',2)
                             size = int(n_size)
                             continue
-                        if(msg_num == 1):
-                            print(info,end='')
+                        #if(msg_num == 1):
+                            #print(info,end='')
                     continue
                 except Exception as e:
                     print(e)
