@@ -93,7 +93,7 @@ def tcp_server(host,port):
         server_socket = socket.socket()  # get instance
         server_socket.bind((host, port))  # bind host address and port together
         print("Hello, I am a server.");
-        server_socket.listen(3) # 2 possible clients
+        server_socket.listen(7) # 7 possible clients
         while True:
                 conn, address = server_socket.accept()# accept new connection
                 n_clients += 1 # one more client connected 
